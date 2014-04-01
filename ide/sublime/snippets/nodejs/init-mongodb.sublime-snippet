@@ -1,0 +1,25 @@
+<snippet>
+	<content><![CDATA[
+var MongoClient = require('mongodb').MongoClient;
+var Grid = require('mongodb').Grid;
+var Db = require('mongodb').Db;
+var GridStore = require('mongodb').GridStore;
+var ObjectID = require('mongodb').ObjectID;
+
+var host = '${1:localhost}', port = ${2:27017};
+var dbName = '${3:Database}';
+
+MongoClient.connect('mongodb://'+ host + ':' + port + '/' + dbName, function(err, db) {
+	if(err) {
+		console.log(err);
+		return;
+	}
+  	var ${4:CollectionName} = db.collection('${4:CollectionName}');
+});
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nodejs-init-mongodb</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

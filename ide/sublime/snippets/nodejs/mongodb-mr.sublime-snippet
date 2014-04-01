@@ -1,0 +1,37 @@
+<snippet>
+	<content><![CDATA[
+  var map = function() {
+    emit(this.user.time_zone, 1);
+  };
+ 
+  var reduce = function(timezone, values) {
+	var sum
+ 
+    values.forEach(function(value) {
+		sum += value;
+    });
+ 
+    return sum;
+  };
+ 
+  example.mapReduce(
+      map,
+      reduce,
+      { out: 'mrtemp'},
+      function(err, coll) {
+        coll.find().toArray(function(err, arr) {
+		  if(err) {
+		  	console.log(err);
+		  	return;
+		  }
+          console.log(arr);
+        });
+      }
+  );
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mongodb-mr</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

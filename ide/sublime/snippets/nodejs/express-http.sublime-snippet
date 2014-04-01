@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+app.get ('/customer',function(req,res){
+	res.send('complete');
+});
+
+app.post('/${1:customer}/:id',function(req,res){
+	var id = req.params.id;
+
+	//var param1 = req.body.param1;
+	//var param2 = req.body.param2;
+	res.send('complete');
+});
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nodejs-express-http</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

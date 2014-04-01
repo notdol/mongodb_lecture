@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+var mongoose = require('mongoose');
+var Schema = mongoose.Schema;
+var host = '${1:localhost}', dbPort = ${2:27017};
+var dbName = '${3:testDB}';
+
+mongoose.connect('mongodb://' + host + ':' + dbPort);		
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nodejs-init-mongoose</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

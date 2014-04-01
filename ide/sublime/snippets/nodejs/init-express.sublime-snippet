@@ -1,0 +1,21 @@
+<snippet>
+	<content><![CDATA[
+var express = require('express');
+var app = express();
+var port = ${1:8080};
+
+app.use(express.bodyParser());
+app.use(express.methodOverride());
+app.use(app.router);
+app.use(function(err, req, res, next){
+  // logic
+});
+
+app.listen(port);
+console.log('server started with ' + port );
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>nodejs-init-express</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
