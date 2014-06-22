@@ -9,10 +9,10 @@ MongoClient.connect('mongodb://192.168.219.5:27017/twitter', function(err, db) {
   };
  
   var reduce = function(timezone, values) {
-	var sum
+	var sum = {};
  
     values.forEach(function(value) {
-		sum += value;
+		sum[value] = 1 ;
     });
  
     return sum;

@@ -11,3 +11,4 @@ app.get('/', function(req, res){
 });
 
 app.listen(3001);
+console.log(" server started with : "+3001);

@@ -9,7 +9,8 @@ var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost:27100/twitter');
 
 var TwitSchema = new Schema({}, { strict: false });
-var twitter = mongoose.model('twit',TwitSchema);
+var twitter = mongoose.model('samsung',TwitSchema);
+
 
 
 /*
@@ -38,8 +39,7 @@ stream.on('tweet', function (tweet) {
   console.log(tweet)
 })
 */
-
-var stream = T.stream('statuses/filter', { track : 'G3' });
+var stream = T.stream('statuses/filter', { track : 'samsung' });
 
 stream.on('tweet', function( tweet ) {
  // console.log(tweet);

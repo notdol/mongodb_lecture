@@ -9,7 +9,7 @@ var Schema = mongoose.Schema;
 mongoose.connect('mongodb://localhost:27100/twitter');
 
 var TwitSchema = new Schema({}, { strict: false });
-var twitter = mongoose.model('twit',TwitSchema);
+var twitter = mongoose.model('G3',TwitSchema);
 
 
 /*

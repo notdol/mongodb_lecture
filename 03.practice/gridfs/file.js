@@ -18,7 +18,7 @@ MongoClient.connect("mongodb://localhost:27017/grid",function(err, db) {
   var fileId = new ObjectID();
   var gridStore = new GridStore(db,fileId,"w");
 
-	gridStore.writeFile( __dirname+'/'+'gridfs.js', function(err,fileInfo) {
+	gridStore.writeFile( __dirname+'/'+'file.js', function(err,fileInfo) {
 		if(err){
 			console.log('err:' + err);
 			return

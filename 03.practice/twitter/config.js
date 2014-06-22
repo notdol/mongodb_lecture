@@ -1,6 +1,7 @@
 module.exports = {
-  consumer_key : 'Py6O7vdWVvozPlvYH7K74Q',
-  consumer_secret : '2aZ0jb0t5Z7Ro4X2wk28boUcRqBtAVMAdKWv3WJDat8',
-  access_token : '58740230-KJDkCdKfghbhVhpAdtYBndc3IbKnF2f6dQVhaer0c',
-  access_token_secret : 'I8HGrS0mv8S136vGXdZwSjTdy3hLLIN4Nt2FELsu0'
+  consumer_key : 'ct1rH3uXQ3c73kPZLwCdZ4MNd',
+  consumer_secret : 'hWADwLTndYMVCx9APFB7ecj59JAFddnHqy0DQujVckqT0J2E3h',
+  access_token : '58740230-vjNwVL7l825AcdpKh644h1qhcJNQLOLug5OyX2LEJ', 		// twit module
+  access_token_key : '58740230-vjNwVL7l825AcdpKh644h1qhcJNQLOLug5OyX2LEJ', // ntwitter module
+  access_token_secret : 'LzcWcrU0b9BX1Qj98eWPKhnJEtVWx69MMTFnRWEXlNF0M'
 }

@@ -3,9 +3,12 @@ var mongoose = require('mongoose')
   , Schema = mongoose.Schema;
 var database = 'Northwind';
 
-var express = require('express');
+var express = require('express'),
+	bodyParser = require('body-parser');
+
 var app = express();
-app.use( express.bodyParser() );
+//app.use( express.bodyParser() );
+app.use( bodyParser.json() );
 
 mongoose.connect(config.db+database);
 
@@ -24,5 +27,12 @@ app.get('/customer/:id', function(req, res){
 		});
 	*/
 });
+
+app.get('/customer', function(req, res){
+		Customer.find({},{}).sort({CustomerID: -1}).exec(function(err,data){
+			res.send(data);
+		});
+});
+
 
 app.listen(3000);
