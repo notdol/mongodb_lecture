@@ -2,11 +2,12 @@
 	<content><![CDATA[
 var express = require('express');
 var app = express();
+var bodyParser = require('body-parser');
 var port = ${1:8080};
 
-app.use(express.bodyParser());
-app.use(express.methodOverride());
-app.use(app.router);
+app.use(bodyParser.urlencoded())
+app.use(bodyParser.json())
+
 app.use(function(err, req, res, next){
   // logic
 });
