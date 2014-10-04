@@ -1,0 +1,20 @@
+<snippet>
+	<content><![CDATA[
+// var mongoose = require('mongoose')
+// , Schema = mongoose.Schema;
+
+var ${1:Custom}Schema = new Schema({
+	ColumnString1 : { type: String, default: 'Seoul' }
+	, ColumnDate : { type: Date, default: Date.now }
+	, ColumnNumber: { type: Number, min: 18 }
+	, ColumnArray : { type: Array }
+	, ColumnObject : { type: Object }
+});
+var ${1:Custom} = mongoose.model('${1:Custom}',${1:Custom}Schema);
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mongoose-model</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>

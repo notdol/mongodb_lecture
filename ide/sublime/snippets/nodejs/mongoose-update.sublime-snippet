@@ -1,0 +1,29 @@
+<snippet>
+	<content><![CDATA[
+
+// var mongoose = require('mongoose')
+// , Schema = mongoose.Schema;
+
+var ${1:Custom}Schema = new Schema();
+var ${1:Custom} = mongoose.model('${1:Custom}',${1:Custom}Schema);
+
+${1:Custom}.update({age: 10},
+	{name: 'jason borne'},    //{ $set: { name: 'jason borne' }}
+	{/*options*/}, 
+	function(err){
+
+	});
+/*
+${1:Custom}.findOne({age: 10}, function (err, doc){
+  doc.name = 'jason borne';
+  doc.visits.$inc();
+  doc.save();
+});	
+*/
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>mongoose-update</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.js</scope>
+</snippet>
